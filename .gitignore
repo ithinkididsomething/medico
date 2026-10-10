@@ -52,6 +52,3 @@ app.*.map.json
 .env.*
 !.env.example
 
-# Build artifacts
-medico-release.apk
-
