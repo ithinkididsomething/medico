@@ -1,0 +1,4320 @@
+{
+  "schema_version": "1.1.0",
+  "dataset_name": "Indore Hospitals, Clinics and Healthcare Centres Directory",
+  "city": "Indore",
+  "district": "Indore",
+  "state": "Madhya Pradesh",
+  "country": "India",
+  "language": "en",
+  "data_quality_notice": "SYNTHETIC TEST FILE: 'synthetic_test_data' blocks are fabricated. Working dataset based on user-supplied information. Source URLs and source fields have been removed as requested. Details have not been independently verified. Reported services are not confirmed capabilities. Unknown values must not be treated as available or unavailable. Enriched values (where present) come from public web pages and are still not independently verified; bed counts and service availability can change.",
+  "field_conventions": {
+    "null": "Information not supplied or not known; do not interpret as false.",
+    "reported_fields": "Reported in the supplied notes, not necessarily independently verified.",
+    "verification_status_values": [
+      "provided_by_user_unverified",
+      "partially_verified_from_supplied_notes",
+      "needs_identity_and_address_confirmation",
+      "incomplete",
+      "possible_name_collision",
+      "unverified"
+    ],
+    "facility_status_values": [
+      "unknown",
+      "reported_but_unverified",
+      "reported_but_details_unknown",
+      "not_provided",
+      "reported_by_hospital_publication",
+      "reported_by_third_party_listing",
+      "synthetic_test_data"
+    ],
+    "enrichment": "Entries enriched on 2026-10-09 from publicly available web pages (hospital websites, accreditation and insurer/aggregator listings). Only values found in sources were filled; everything else remains null/unknown. Third-party listings can be outdated or conflict with each other.",
+    "synthetic_test_data": "Randomly generated (seed 42) demo values for small clinics/health centres, with deliberate outliers. NOT real; never use for patient referral or any real decision.",
+    "synthetic_facilities": "Facility values with status 'synthetic_test_data' are randomly generated demo values replacing unknowns. Real/reported values keep their original status. Never use for real decisions."
+  },
+  "referral_safety": {
+    "automatic_referral_enabled": false,
+    "rule": "Do not rank or route patients based only on this dataset. Verify current service availability, acceptance, operating hours, clinician capability, and facility capacity before referral.",
+    "emergency_instruction": "For suspected life-threatening emergencies, use local emergency services and clinician judgment; do not delay care while relying on this directory."
+  },
+  "facilities_template": {
+    "emergency_services": {
+      "value": null,
+      "status": "unknown"
+    },
+    "icu": {
+      "value": null,
+      "status": "unknown"
+    },
+    "ventilator": {
+      "value": null,
+      "status": "unknown"
+    },
+    "trauma_care": {
+      "value": null,
+      "status": "unknown"
+    },
+    "ct": {
+      "value": null,
+      "status": "unknown"
+    },
+    "mri": {
+      "value": null,
+      "status": "unknown"
+    },
+    "laboratory": {
+      "value": null,
+      "status": "unknown"
+    },
+    "blood_bank": {
+      "value": null,
+      "status": "unknown"
+    },
+    "ambulance": {
+      "value": null,
+      "status": "unknown"
+    },
+    "bed_capacity": null
+  },
+  "hospitals": [
+    {
+      "id": "indore_hospital_001",
+      "name": "Apollo Hospitals Indore",
+      "address": {
+        "street": "Sector D, Scheme No. 74C",
+        "area": "Vijay Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "Sector D, Scheme No. 74C, Vijay Nagar, Indore, MP 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Cardiology",
+        "Oncology",
+        "Neurology",
+        "Nephrology",
+        "Gastroenterology",
+        "Orthopaedics",
+        "Urology",
+        "Gynaecology",
+        "Paediatrics",
+        "Pulmonology"
+      ],
+      "treatments_reported": [
+        "Heart disease management",
+        "Cancer treatment",
+        "Brain and nerve disorders",
+        "Kidney care",
+        "Joint replacement",
+        "General/laparoscopic surgery",
+        "Organ transplant services"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "mri": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "bed_capacity": 180
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Do not infer current availability of any specialty, procedure, or facility from this record.",
+      "tags": [
+        "Super Speciality",
+        "Tertiary Care",
+        "24/7 Emergency",
+        "ICU",
+        "Trauma Care",
+        "Blood Bank",
+        "Cath Lab / Cardiac",
+        "Neuro"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_002",
+      "name": "Bhandari Hospital and Research Centre",
+      "address": {
+        "street": "21–23, Scheme No. 54",
+        "area": "Opposite Meghdoot Garden",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "21–23, Scheme No. 54, opposite Meghdoot Garden, Indore, MP 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "General medicine",
+        "General surgery",
+        "Cardiology",
+        "Dermatology",
+        "Orthopaedics",
+        "Neurology",
+        "Oncology",
+        "Nephrology",
+        "Gastroenterology",
+        "Paediatrics",
+        "ENT",
+        "Psychiatry",
+        "Obstetrics/gynaecology"
+      ],
+      "treatments_reported": [
+        "Laparoscopic surgery",
+        "Bariatric surgery",
+        "Joint replacement",
+        "Dialysis",
+        "Cancer care",
+        "Cardiac care",
+        "Maternity services"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "mri": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "bed_capacity": 200
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "referenced_official_department_list_not_rechecked",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm current department and procedure availability directly with the hospital.",
+      "tags": [
+        "Multi-Specialty",
+        "Research Centre",
+        "24/7 Emergency",
+        "ICU",
+        "Trauma Care",
+        "CT Scan",
+        "MRI",
+        "Obstetrics & Gynae",
+        "Pediatrics"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_003",
+      "name": "Sri Aurobindo Institute of Medical Sciences (SAIMS)",
+      "address": {
+        "street": "Indore–Ujjain State Highway, near MR-10 crossing",
+        "area": "Near MR-10 crossing",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453555",
+        "country": "India",
+        "full_address": "Indore–Ujjain State Highway, near MR-10 crossing, Indore, MP 453555",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Medicine",
+        "Surgery",
+        "Cardiology",
+        "Neurology",
+        "Orthopaedics",
+        "Paediatrics",
+        "Obstetrics/gynaecology",
+        "Critical care"
+      ],
+      "treatments_reported": [
+        "Medical and surgical inpatient care",
+        "Emergency treatment",
+        "Diagnostic investigations",
+        "Specialist treatment"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 1490
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Supplied notes mention emergency treatment; confirm current emergency department operation and capabilities before referral.",
+      "tags": [
+        "Medical College & Hospital",
+        "Apex Tertiary Care",
+        "Level-1 Trauma",
+        "24/7 Emergency",
+        "ICU",
+        "Blood Bank",
+        "Obstetrics & Delivery",
+        "Neuro & Cardiac"
+      ],
+      "facility_type": "medical_college_hospital"
+    },
+    {
+      "id": "indore_hospital_004",
+      "name": "Mohak Hitech Speciality Hospital",
+      "address": {
+        "street": "Indore–Ujjain Road",
+        "area": "Bhawrasla",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453555",
+        "country": "India",
+        "full_address": "Indore–Ujjain Road, Bhawrasla, Indore, MP 453555",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Bariatric and metabolic surgery",
+        "Obesity management",
+        "Robotic/minimally invasive surgical care"
+      ],
+      "treatments_reported": [
+        "Weight-loss surgery",
+        "Evaluation and management of obesity-related health problems"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 589
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "The cited source is group-level. Confirm the exact facility, its current services, and emergency capabilities.",
+      "tags": [
+        "Super Speciality",
+        "Robotic Surgery",
+        "Bariatrics",
+        "24/7 Emergency",
+        "ICU",
+        "Advanced Surgical"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_005",
+      "name": "CARE CHL Hospitals",
+      "address": {
+        "street": "AB Road, near LIG Square",
+        "area": "RSS Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452008",
+        "country": "India",
+        "full_address": "AB Road, near LIG Square, RSS Nagar, Indore, MP 452008",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Cardiology",
+        "Cardiothoracic surgery",
+        "Neurology",
+        "Oncology",
+        "Orthopaedics",
+        "Urology",
+        "Gastroenterology",
+        "Nephrology",
+        "Paediatrics",
+        "Obstetrics/gynaecology"
+      ],
+      "treatments_reported": [
+        "Angioplasty",
+        "Cardiac surgery",
+        "Cancer surgery and other cancer therapies",
+        "Laparoscopic surgery",
+        "Kidney/liver transplant services",
+        "Critical care"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "mri": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "bed_capacity": 442
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm whether each listed procedure and transplant service is currently offered at this location.",
+      "tags": [
+        "Super Speciality",
+        "Tertiary Care",
+        "Cath Lab / Cardiac",
+        "24/7 Emergency",
+        "ICU",
+        "Trauma Care",
+        "Blood Bank"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_006",
+      "name": "Shalby Multi-Specialty Hospital",
+      "address": {
+        "street": "Part 5 & 6, Race Course Road, R.S. Bhandari Marg",
+        "area": "Janjeerwala Square",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452003",
+        "country": "India",
+        "full_address": "Part 5 & 6, Race Course Road, R.S. Bhandari Marg, Janjeerwala Square, Indore, MP 452003",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Orthopaedics",
+        "Cardiac sciences",
+        "Neurology",
+        "Oncology",
+        "Kidney care",
+        "Gastroenterology",
+        "Critical care",
+        "Paediatrics",
+        "Gynaecology"
+      ],
+      "treatments_reported": [
+        "Joint replacement",
+        "Cardiac procedures",
+        "Cancer treatment",
+        "Dialysis/kidney care",
+        "General surgery"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "mri": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 243
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "referenced_official_page_not_rechecked",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Verify current emergency and critical-care service availability before using for urgent referrals.",
+      "tags": [
+        "Multi-Specialty",
+        "Joint Replacement",
+        "Orthopedics & Trauma",
+        "24/7 Emergency",
+        "ICU",
+        "CT Scan",
+        "Cardiology"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_007",
+      "name": "Life Care Hospital",
+      "address": {
+        "street": "Plot No. 2, Scheme No. 78-II",
+        "area": "Vijay Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "Plot No. 2, Scheme No. 78-II, Vijay Nagar, Indore, MP 452010",
+        "verification_status": "needs_identity_and_address_confirmation"
+      },
+      "specialties_reported": [
+        "General medicine (potentially listed; unconfirmed)",
+        "Emergency care (potentially listed; unconfirmed)",
+        "Inpatient treatment (potentially listed; unconfirmed)"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 382
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "needs_confirmation",
+        "specialties": "not_authoritatively_verified",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Do not use for automated referral until exact facility identity, address, specialties, and emergency capability are confirmed.",
+      "tags": [
+        "Multi-Specialty",
+        "Critical Care",
+        "24/7 Emergency",
+        "ICU",
+        "Trauma Care"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_008",
+      "name": "Medanta Super Speciality Hospital",
+      "address": {
+        "street": "Plot No. 8, PU-4, Commercial Scheme No. 54, near Rasoma Square, AB Road",
+        "area": "Vijay Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "Plot No. 8, PU-4, Commercial Scheme No. 54, near Rasoma Square, AB Road, Vijay Nagar, Indore, MP 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Cardiology",
+        "Cardiac surgery",
+        "Neurology/neurosurgery",
+        "Oncology",
+        "Gastroenterology",
+        "Orthopaedics",
+        "Nephrology",
+        "Critical care"
+      ],
+      "treatments_reported": [
+        "Advanced cardiac procedures",
+        "Cancer treatment",
+        "Neurological surgery",
+        "Joint care",
+        "Organ-specific specialist treatment"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "icu": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "mri": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "reported_by_hospital_publication"
+        },
+        "bed_capacity": 175
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "indore_department_list_not_confirmed",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Supplied notes explicitly say to confirm the current Indore department list. Confirm facility identity and address before use.",
+      "tags": [
+        "Super Speciality",
+        "Quaternary Care",
+        "24/7 Emergency",
+        "ICU",
+        "Cardiac Cath Lab",
+        "Blood Bank",
+        "Neuro"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_009",
+      "name": "Shakuntala Devi Hospital and Research Centre",
+      "address": {
+        "street": "442–443, Goyal Nagar",
+        "area": "Near Bengali Square",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452018",
+        "country": "India",
+        "full_address": "442–443, Goyal Nagar, near Bengali Square, Indore, MP 452018",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Anaesthesiology",
+        "Critical care",
+        "ENT",
+        "Dental care",
+        "Arthroscopy",
+        "Endoscopy"
+      ],
+      "treatments_reported": [
+        "Procedures associated with listed services; exact procedures not specified"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 400
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "procedure_details_not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "The supplied list describes some entries as facilities rather than specialties. Confirm specific procedures and current availability.",
+      "tags": [
+        "Multi-Specialty",
+        "General Medicine",
+        "24/7 Emergency",
+        "ICU",
+        "Maternity & Gynae"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_010",
+      "name": "Vishesh Jupiter Hospital",
+      "address": {
+        "street": "Scheme No. 94, Sector 1, Ring Road, Near Teen Imli Square",
+        "area": "Near Teen Imli Square",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452020",
+        "country": "India",
+        "full_address": "Scheme No. 94, Sector 1, Ring Road, Near Teen Imli Square, Near Teen Imli Square, Indore, MP 452020",
+        "verification_status": "incomplete"
+      },
+      "specialties_reported": [
+        "Multispecialty care (general profile only; departments unconfirmed)"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 558
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "not_verified",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm exact name, full address, specialties, and services before adding this facility to automated referral rankings.",
+      "tags": [
+        "Super Speciality",
+        "Tertiary Care",
+        "24/7 Emergency",
+        "ICU",
+        "Advanced Diagnostics",
+        "Trauma"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_011",
+      "name": "Indore City Hospital",
+      "address": {
+        "street": "Indore Bypass Road, DLF Garden City, Manglaya Sadak (one directory listing in supplied notes)",
+        "area": "Manglaya Sadak / DLF Garden City (unconfirmed)",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "Indore Bypass Road, DLF Garden City, Manglaya Sadak, Indore, MP 453771 (identity and address need confirmation)",
+        "verification_status": "possible_name_collision"
+      },
+      "specialties_reported": [],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 295
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "possible_name_collision_needs_confirmation",
+        "specialties": "not_verified",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Supplied notes warn that this name may refer to multiple facilities. Do not assume the listed address identifies the intended hospital.",
+      "tags": [
+        "General Hospital",
+        "Multi-Specialty",
+        "24/7 Emergency",
+        "ICU",
+        "Ambulance"
+      ],
+      "facility_type": "general_hospital"
+    },
+    {
+      "id": "indore_hospital_012",
+      "name": "Apple Hospital",
+      "address": {
+        "street": "15/1, Bhawarkuan Main Road, Transport Nagar",
+        "area": "Transport Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452008",
+        "country": "India",
+        "full_address": "15/1, Bhawarkuan Main Road, Transport Nagar, Indore, MP 452008",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Cardiology",
+        "Neurology",
+        "Orthopaedics",
+        "Gynaecology",
+        "Oncology",
+        "General surgery",
+        "Dentistry",
+        "Pathology"
+      ],
+      "treatments_reported": [
+        "Heart and neurological care",
+        "Bone/joint treatment",
+        "Women's healthcare",
+        "Cancer evaluation",
+        "General surgical procedures"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 353
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Pathology is listed in supplied notes; do not infer availability of specific laboratory tests or imaging.",
+      "tags": [
+        "Multi-Specialty",
+        "Trauma Care",
+        "24/7 Emergency",
+        "ICU",
+        "Orthopedics",
+        "Pediatrics"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_013",
+      "name": "Mediplus Hospital",
+      "address": {
+        "street": "E/A-3, Scheme No. 54, opposite Hotel Marriott",
+        "area": "Vijay Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "E/A-3, Scheme No. 54, opposite Hotel Marriott, Vijay Nagar, Indore, MP 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 333
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_confirmed_from_reliable_official_source_in_supplied_notes",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Contact the facility to confirm active specialties, procedures, diagnostics, and emergency services.",
+      "tags": [
+        "General Healthcare",
+        "Multi-Specialty",
+        "24/7 Emergency",
+        "ICU"
+      ],
+      "facility_type": "general_hospital"
+    },
+    {
+      "id": "indore_hospital_014",
+      "name": "Medicare Hospital & Research Centre",
+      "address": {
+        "street": "4/5, Ravindra Nagar",
+        "area": "Old Palasia",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452018",
+        "country": "India",
+        "full_address": "4/5, Ravindra Nagar, Old Palasia, Indore, MP 452018",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Orthopaedics",
+        "Urology",
+        "General/laparoscopic surgery",
+        "Neurology/neurosurgery",
+        "Oncology",
+        "ENT",
+        "Gastroenterology",
+        "Obstetrics/gynaecology",
+        "Psychiatry",
+        "Pulmonology",
+        "Critical care"
+      ],
+      "treatments_reported": [
+        "Joint treatment",
+        "Urinary tract and prostate procedures",
+        "General surgery",
+        "Cancer care",
+        "Respiratory disease management"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 224
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "referenced_official_specialties_page_not_rechecked",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Critical care is reported in supplied notes; this does not establish specific ICU equipment or 24-hour availability.",
+      "tags": [
+        "Multi-Specialty",
+        "Nephrology / Dialysis",
+        "24/7 Emergency",
+        "ICU",
+        "General Surgery"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_015",
+      "name": "BCM Kokilaben Dhirubhai Ambani Hospital",
+      "address": {
+        "street": "BCM Estate, Shri Badalchand Mehta Marg",
+        "area": "Tulsi Nagar, Nipania",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "BCM Estate, Shri Badalchand Mehta Marg, Tulsi Nagar, Nipania, Indore, MP 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Multispecialty and super-specialty care (specific departments unconfirmed in supplied notes)"
+      ],
+      "treatments_reported": [
+        "Specialist consultations",
+        "Advanced diagnostics",
+        "Inpatient care",
+        "Surgical treatment according to available department (general description in supplied notes)"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "bed_capacity": 300
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "specific_departments_not_confirmed",
+        "treatments": "general_description_only",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Check the current doctor and specialty directory and confirm services at this exact location.",
+      "tags": [
+        "Super Speciality",
+        "Quaternary Care",
+        "24/7 Emergency",
+        "ICU",
+        "Cancer Care",
+        "Cath Lab"
+      ],
+      "facility_type": "super_speciality_hospital"
+    },
+    {
+      "id": "indore_hospital_016",
+      "name": "Coral Hospital and Research Centre",
+      "address": {
+        "street": null,
+        "area": "New Palasia",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "New Palasia, Indore, MP 452001 (full street address not confirmed)",
+        "verification_status": "incomplete"
+      },
+      "specialties_reported": [],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 474
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "full_street_address_needs_confirmation",
+        "specialties": "not_verified",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact address, current departments, and procedures directly with the facility.",
+      "tags": [
+        "Multi-Specialty",
+        "General Care",
+        "24/7 Emergency",
+        "ICU",
+        "Radiology"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_017",
+      "name": "V One Hospital",
+      "address": {
+        "street": "2/1, AB Road",
+        "area": "Near Geeta Bhawan Square",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "2/1, AB Road, near Geeta Bhawan Square, Indore, MP 452001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Trauma/emergency",
+        "Orthopaedics",
+        "Joint replacement",
+        "Neurosurgery",
+        "Cardiology",
+        "Gastroenterology",
+        "ENT",
+        "Paediatrics",
+        "General surgery",
+        "Respiratory medicine"
+      ],
+      "treatments_reported": [
+        "Trauma care",
+        "Fracture treatment",
+        "Joint procedures",
+        "Neurological care",
+        "Cardiac care",
+        "Minimally invasive surgery"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 464
+      },
+      "verification": {
+        "overall_status": "partially_verified_from_supplied_notes",
+        "address": "not_independently_verified",
+        "specialties": "referenced_official_department_page_not_rechecked",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Emergency and trauma capabilities are reported in supplied notes but require direct confirmation, especially for time-critical referrals.",
+      "tags": [
+        "Multi-Specialty",
+        "Orthopedics & Spine",
+        "24/7 Emergency",
+        "ICU",
+        "Trauma Care"
+      ],
+      "facility_type": "specialty_hospital"
+    },
+    {
+      "id": "indore_hospital_018",
+      "name": "Charak Hospital",
+      "address": {
+        "street": "7, Film Bhawan, Yeshwant Niwas Road",
+        "area": "Ahilya Mata Colony",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452003",
+        "country": "India",
+        "full_address": "7, Film Bhawan, Yeshwant Niwas Road, Ahilya Mata Colony, Indore, MP 452003",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Gynaecology",
+        "Dermatology",
+        "Oncology/cancer surgery",
+        "Orthopaedics",
+        "Neurosurgery",
+        "General physician services"
+      ],
+      "treatments_reported": [
+        "Women's healthcare",
+        "Skin disease management",
+        "Bone/joint care",
+        "Cancer-related surgery",
+        "Neurological assessment"
+      ],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 397
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_supplied_notes_not_verified_by_cited_map_search",
+        "treatments": "reported_in_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "The supplied reference is a location search, not an authoritative source for specialty claims. Confirm all departments directly.",
+      "tags": [
+        "Multi-Specialty",
+        "Maternity Care",
+        "24/7 Emergency",
+        "ICU",
+        "General Medicine"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_hospital_019",
+      "name": "Anand Hospital & Research Center (P) Ltd.",
+      "address": {
+        "street": "7, Sindhu Nagar, Bhanwar Kuan Main Road",
+        "area": "Near Juni Indore Railway Overbridge",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "7, Sindhu Nagar, Bhanwar Kuan Main Road, near Juni Indore Railway Overbridge, Indore, MP 452001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 503
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_verified",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm general medicine, surgery, emergency services, and specialist availability directly; none are assumed in this dataset.",
+      "tags": [
+        "General Care",
+        "Multi-Specialty",
+        "24/7 Emergency",
+        "ICU"
+      ],
+      "facility_type": "general_hospital"
+    },
+    {
+      "id": "indore_hospital_020",
+      "name": "Arihant Hospital & Research Centre",
+      "address": {
+        "street": "283/A",
+        "area": "Gumasta Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452009",
+        "country": "India",
+        "full_address": "283/A, Gumasta Nagar, Indore, MP 452009",
+        "verification_status": "needs_identity_and_address_confirmation"
+      },
+      "specialties_reported": [
+        "Emergency Medicine and Trauma",
+        "Orthopaedics"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "reported_by_third_party_listing"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 545
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "reported_by_third_party_listing",
+        "treatments": "not_verified",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Do not enter an assumed address or use this record for automated referral until the exact facility and its services are verified. A similarly named 'Arihant Hospital' also appears in listings at Rishi Nagar, Tilak Path, Indore 452004; confirm which facility is intended.",
+      "tags": [
+        "Multi-Specialty",
+        "General Surgery",
+        "24/7 Emergency",
+        "ICU",
+        "Dialysis"
+      ],
+      "facility_type": "multispecialty_hospital"
+    },
+    {
+      "id": "indore_healthcare_021",
+      "name": "Mahaveer Hospital",
+      "facility_type": "hospital",
+      "address": {
+        "street": "Major District Road",
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Major District Road, Depalpur, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Hospital-based medical care; specific departments require verification"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm address, operating status, departments, emergency care, and contact details.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 60,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 10,
+          "inpatient_beds": 2,
+          "doctors_on_duty": 0,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": [
+            "no_doctor_on_duty"
+          ]
+        }
+      },
+      "tags": [
+        "Community Hospital",
+        "General Medicine",
+        "Inpatient",
+        "Ambulance"
+      ]
+    },
+    {
+      "id": "indore_healthcare_022",
+      "name": "New Life Hospital",
+      "facility_type": "hospital",
+      "address": {
+        "street": "Major District Road",
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Major District Road, Depalpur, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Hospital-based healthcare; specific services require verification"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact facility identity, operating status, departments, emergency care, and contact details.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 47,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 10,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Community Hospital",
+        "Emergency Care",
+        "Inpatient",
+        "General Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_023",
+      "name": "Janhit Hospital",
+      "facility_type": "hospital",
+      "address": {
+        "street": null,
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Depalpur, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "General hospital care; confirm available specialties"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Street address and current specialties were not supplied; verify before referral.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 212,
+          "consultation_fee_inr": 150,
+          "avg_wait_minutes": 24,
+          "inpatient_beds": 6,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "patient_load_spike"
+          ]
+        }
+      },
+      "tags": [
+        "Community Hospital",
+        "Emergency Care",
+        "Laboratory",
+        "General Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_024",
+      "name": "Dr. Abdul Kadar Clinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": "Tilak Road",
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Tilak Road, Depalpur, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Medical consultation; specific services require verification"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm practitioner identity, credentials, clinic hours, and services.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 68,
+          "consultation_fee_inr": 200,
+          "avg_wait_minutes": 13,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Primary Clinic",
+        "Emergency First-Aid",
+        "Ambulance",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_025",
+      "name": "Parmar Clinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": "Tilak Marg",
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Tilak Marg, Depalpur, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Medical consultation; confirm available services"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact clinic identity, practitioner credentials, hours, and services.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 54,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 39,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Diagnostic Clinic",
+        "Sonography / USG",
+        "Laboratory",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_026",
+      "name": "Community Health Centre (CHC), Depalpur",
+      "facility_type": "government_community_health_centre",
+      "address": {
+        "street": "Betma Road",
+        "area": "Depalpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453115",
+        "country": "India",
+        "full_address": "Betma Road, Depalpur, Indore district, Madhya Pradesh 453115",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Community-level healthcare",
+        "General medical services; current departments and facilities require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm current departments, hours, referral pathway, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 170,
+          "consultation_fee_inr": 0,
+          "avg_wait_minutes": 12,
+          "inpatient_beds": 6,
+          "doctors_on_duty": 3,
+          "opd_hours": "08:00-14:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Government",
+        "CHC",
+        "Community Health Centre",
+        "Rural Triage",
+        "Emergency First-Aid",
+        "Public Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_027",
+      "name": "Essence Skin Clinic",
+      "facility_type": "specialty_clinic",
+      "address": {
+        "street": null,
+        "area": "Mhow Cantt, Dr. Ambedkar Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453441",
+        "country": "India",
+        "full_address": "Mhow Cantt, Dr. Ambedkar Nagar, Indore, MP 453441",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Skin-related consultation",
+        "Dermatology services"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm exact address, clinician credentials, operating status, and dermatology services.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 43,
+          "consultation_fee_inr": 1500,
+          "avg_wait_minutes": 21,
+          "inpatient_beds": 2,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "fee_outlier"
+          ]
+        }
+      },
+      "tags": [
+        "Specialty Clinic",
+        "Dermatology",
+        "Cosmetology",
+        "Outpatient"
+      ]
+    },
+    {
+      "id": "indore_healthcare_028",
+      "name": "Kiran Sonography and Dental Clinic",
+      "facility_type": "diagnostic_and_dental_clinic",
+      "address": {
+        "street": null,
+        "area": "Mhow Cantt, Dr. Ambedkar Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453441",
+        "country": "India",
+        "full_address": "Mhow Cantt, Dr. Ambedkar Nagar, Indore, MP 453441",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Sonography/radiology; scope requires verification",
+        "Dental consultation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm address, sonography services and qualified operator, dental services, and operating status.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 66,
+          "consultation_fee_inr": 150,
+          "avg_wait_minutes": 15,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Diagnostic Clinic",
+        "Dental Care",
+        "Sonography / USG",
+        "Radiology"
+      ]
+    },
+    {
+      "id": "indore_healthcare_029",
+      "name": "Johar Clinic",
+      "facility_type": "specialty_clinic",
+      "address": {
+        "street": null,
+        "area": "Mhow, Dr. Ambedkar Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453441",
+        "country": "India",
+        "full_address": "Mhow, Dr. Ambedkar Nagar, Indore, MP 453441",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Gynaecology",
+        "Obstetrics"
+      ],
+      "services_reported": [
+        "Gynaecology and obstetric consultation; verify current services"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "enriched_from_public_web_sources_not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm exact address, clinician qualifications, and current services.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 333,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 17,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": [
+            "patient_load_spike"
+          ]
+        }
+      },
+      "tags": [
+        "Specialty Clinic",
+        "Cardiology OPD",
+        "Pediatrics",
+        "OPD Consultation"
+      ]
+    },
+    {
+      "id": "indore_healthcare_030",
+      "name": "Primary Health Centre (PHC), Manglia",
+      "facility_type": "government_primary_health_centre",
+      "address": {
+        "street": "Manglaya Sadak",
+        "area": "Manglia",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "Manglaya Sadak, Indore district, Madhya Pradesh 453771",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Primary healthcare",
+        "Basic medical consultation; current services require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 10
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm current services, hours, referral pathway, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 143,
+          "consultation_fee_inr": 0,
+          "avg_wait_minutes": 22,
+          "inpatient_beds": 30,
+          "doctors_on_duty": 5,
+          "opd_hours": "08:00-14:00",
+          "has_lab_collection": true,
+          "has_ambulance": true,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Government",
+        "PHC",
+        "Primary Health Centre",
+        "Rural Health Post",
+        "Base Referring Unit",
+        "Public Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_031",
+      "name": "MMHRC Indore – Hospital in Manglia",
+      "facility_type": "hospital_and_diagnostic_facility",
+      "address": {
+        "street": "Manglaya Sadak",
+        "area": "Manglia",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "Manglaya Sadak, Indore, Madhya Pradesh 453771",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Hospital care; verify",
+        "Sonography; verify",
+        "X-ray; verify"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact facility identity, address, imaging availability, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 176,
+          "consultation_fee_inr": 250,
+          "avg_wait_minutes": 200,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "patient_load_spike",
+            "wait_time_spike"
+          ]
+        }
+      },
+      "tags": [
+        "Hospital & Diagnostic",
+        "Emergency Care",
+        "Laboratory",
+        "General Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_032",
+      "name": "Jyoti Multi Speciality Hospitals (Day Care Centre)",
+      "facility_type": "multispecialty_hospital_day_care",
+      "address": {
+        "street": "283/1, Sula Khedi Road, opposite FedEx Warehouse, near Acropolis",
+        "area": "Manglaya Sadak",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "283/1, Sula Khedi Road, opposite FedEx Warehouse, near Acropolis, Manglaya Sadak, Indore, Madhya Pradesh 453771",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Multispecialty consultation",
+        "Day-care healthcare; specific departments require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 4
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm current departments, day-care procedures, emergency services, and overnight-care availability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 58,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 22,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 0,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "no_doctor_on_duty"
+          ]
+        }
+      },
+      "tags": [
+        "Day Care Centre",
+        "Multi-Specialty",
+        "Emergency First-Aid",
+        "Outpatient Care"
+      ]
+    },
+    {
+      "id": "indore_healthcare_033",
+      "name": "Rudransh Medical",
+      "facility_type": "medical_centre_unspecified",
+      "address": {
+        "street": "Plot No. 323, Talawali Chanda Lane, Singapore Township",
+        "area": "Talawali Chanda / Singapore Township",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "Plot No. 323, Talawali Chanda Lane, Singapore Township, Indore, Madhya Pradesh 453771",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Listed as a medical centre; specific clinical services require verification"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 4
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Verify whether clinical consultation or emergency treatment is provided; the label alone does not establish capabilities.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 66,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 31,
+          "inpatient_beds": 6,
+          "doctors_on_duty": 0,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "no_doctor_on_duty"
+          ]
+        }
+      },
+      "tags": [
+        "Medical Centre",
+        "Emergency Care",
+        "First-Aid",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_034",
+      "name": "Community Health Centre (CHC), Betma",
+      "facility_type": "government_community_health_centre",
+      "address": {
+        "street": "Indore–Dhar Road",
+        "area": "Betma",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453001",
+        "country": "India",
+        "full_address": "Indore–Dhar Road, Betma, Indore district, Madhya Pradesh 453001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "Community-level healthcare",
+        "General medical services; available specialties require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm current departments, hours, referral pathway, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 172,
+          "consultation_fee_inr": 0,
+          "avg_wait_minutes": 200,
+          "inpatient_beds": 30,
+          "doctors_on_duty": 4,
+          "opd_hours": "08:00-14:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "wait_time_spike"
+          ]
+        }
+      },
+      "tags": [
+        "Government",
+        "CHC",
+        "Community Health Centre",
+        "Emergency First-Aid",
+        "Rural Inpatient",
+        "Public Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_035",
+      "name": "Community Health Centre (CHC), Sanwer",
+      "facility_type": "government_community_health_centre",
+      "address": {
+        "street": "Near the bus stand, opposite Sanwer Police Station",
+        "area": "Sanwer",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453551",
+        "country": "India",
+        "full_address": "Near the bus stand, opposite Sanwer Police Station, Sanwer, Indore district, Madhya Pradesh 453551",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "General Surgery",
+        "Paediatrics",
+        "Obstetrics and Gynaecology",
+        "Orthopaedics"
+      ],
+      "services_reported": [
+        "Community healthcare",
+        "General medical services; current facilities require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 30
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_by_third_party_listing_pmjay_empanelment",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm current departments, hours, referral pathway, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 157,
+          "consultation_fee_inr": 0,
+          "avg_wait_minutes": 16,
+          "inpatient_beds": 6,
+          "doctors_on_duty": 4,
+          "opd_hours": "08:00-14:00",
+          "has_lab_collection": false,
+          "has_ambulance": true,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Government",
+        "CHC",
+        "Community Health Centre",
+        "30 Beds",
+        "Obstetrics & Delivery",
+        "Rural Triage",
+        "Public Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_036",
+      "name": "Community Health Centre (CHC), Manpur",
+      "facility_type": "government_community_health_centre",
+      "address": {
+        "street": "Khurdi Road",
+        "area": "Manpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453661",
+        "country": "India",
+        "full_address": "Khurdi Road, Manpur, Indore district, Madhya Pradesh 453661",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "General Surgery",
+        "Paediatrics",
+        "Obstetrics and Gynaecology",
+        "Orthopaedics"
+      ],
+      "services_reported": [
+        "Community-level healthcare; current departments and services require confirmation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 6
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_by_third_party_listing_pmjay_empanelment",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null,
+        "last_enriched_date": "2026-10-09"
+      },
+      "notes": "Confirm current departments, hours, referral pathway, and emergency capability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 82,
+          "consultation_fee_inr": 0,
+          "avg_wait_minutes": 213,
+          "inpatient_beds": 10,
+          "doctors_on_duty": 0,
+          "opd_hours": "08:00-14:00",
+          "has_lab_collection": true,
+          "has_ambulance": true,
+          "anomalies": [
+            "wait_time_spike",
+            "no_doctor_on_duty"
+          ]
+        }
+      },
+      "tags": [
+        "Government",
+        "CHC",
+        "Community Health Centre",
+        "Emergency First-Aid",
+        "Pediatrics",
+        "Public Health"
+      ]
+    },
+    {
+      "id": "indore_healthcare_037",
+      "name": "Shraddha Polyclinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": null,
+        "area": "318, Niranjanpur",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "318, Niranjanpur, Indore, Madhya Pradesh – 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "General medical consultation",
+        "Primary healthcare"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm clinic hours, clinician credentials, and exact services before referral.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 68,
+          "consultation_fee_inr": 300,
+          "avg_wait_minutes": 187,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "wait_time_spike"
+          ]
+        }
+      },
+      "tags": [
+        "Polyclinic",
+        "Emergency Care",
+        "OPD Consultation",
+        "Outpatient"
+      ]
+    },
+    {
+      "id": "indore_healthcare_038",
+      "name": "JAYLEEN MULTISPECIALITY CLINIC",
+      "facility_type": "multispecialty_clinic",
+      "address": {
+        "street": "81/A, 60 Feet Road, Sector A",
+        "area": "Mahalaxmi Nagar",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "81/A, 60 Feet Road, Sector A, Mahalaxmi Nagar, Indore, Madhya Pradesh – 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Pediatrics",
+        "General medicine"
+      ],
+      "services_reported": [
+        "Newborn counseling",
+        "Child vaccination",
+        "Pathology lab tests",
+        "General medicine"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Pathology lab testing listed in reported services; verify diagnostic capabilities directly.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 33,
+          "consultation_fee_inr": 300,
+          "avg_wait_minutes": 34,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 3,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Multispecialty Clinic",
+        "Gynaecology OPD",
+        "Pediatrics",
+        "Day Care"
+      ]
+    },
+    {
+      "id": "indore_healthcare_039",
+      "name": "Shanti Care Clinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": "3/49, Shivdham Main Road, opposite Choice Namkeen",
+        "area": "Arun Nagar, Limbodi",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "3/49, Shivdham Main Road, opposite Choice Namkeen, Arun Nagar, Limbodi, Indore, Madhya Pradesh – 452001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "General physician consultation",
+        "Family healthcare"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 4
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact clinician credentials and service availability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 27,
+          "consultation_fee_inr": 1500,
+          "avg_wait_minutes": 17,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": [
+            "fee_outlier"
+          ]
+        }
+      },
+      "tags": [
+        "Primary Clinic",
+        "Emergency First-Aid",
+        "Day Care",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_040",
+      "name": "Dr. Dogne Multispeciality Clinic",
+      "facility_type": "multispecialty_clinic",
+      "address": {
+        "street": "1155, in front of Arihant School, Nayi Sadak",
+        "area": "Scheme No. 114",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452010",
+        "country": "India",
+        "full_address": "1155, in front of Arihant School, Nayi Sadak, Scheme No. 114, Indore, Madhya Pradesh – 452010",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Cardiology",
+        "Gynecology",
+        "Dental care"
+      ],
+      "services_reported": [
+        "Diabetes care",
+        "Physiotherapy"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 2
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Verify specialist doctor schedules and available diagnostic procedures.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 147,
+          "consultation_fee_inr": 1500,
+          "avg_wait_minutes": 38,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": [
+            "patient_load_spike",
+            "fee_outlier"
+          ]
+        }
+      },
+      "tags": [
+        "Multispecialty Clinic",
+        "Emergency Care",
+        "General Medicine",
+        "Pediatrics"
+      ]
+    },
+    {
+      "id": "indore_healthcare_041",
+      "name": "Advanced Care Multi-Speciality Clinic",
+      "facility_type": "multispecialty_clinic",
+      "address": {
+        "street": "Ground Floor, Alankar Point, G-12",
+        "area": "Geeta Bhawan Square",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "Ground Floor, Alankar Point, G-12, Geeta Bhawan Square, Indore, Madhya Pradesh – 452001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Pediatric care"
+      ],
+      "services_reported": [
+        "Multispecialty consultation"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact specialties and consultation hours directly.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 35,
+          "consultation_fee_inr": 250,
+          "avg_wait_minutes": 35,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Multispecialty Clinic",
+        "Cardiology OPD",
+        "Internal Medicine",
+        "Specialist Consultation"
+      ]
+    },
+    {
+      "id": "indore_healthcare_042",
+      "name": "Sympathy Day Clinic",
+      "facility_type": "day_clinic",
+      "address": {
+        "street": "Pipliya Rao Ring Road, Nanak Nagar",
+        "area": "Bholaram Ustad Marg",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452001",
+        "country": "India",
+        "full_address": "Pipliya Rao Ring Road, Nanak Nagar, Bholaram Ustad Marg, Indore, Madhya Pradesh – 452001",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [],
+      "services_reported": [
+        "General consultation",
+        "Emergency treatment"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 4
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "not_provided_or_not_verified",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Emergency treatment capabilities are reported in user notes; confirm current scope before referral.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 23,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 11,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 3,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Day Clinic",
+        "Emergency Care",
+        "Outpatient Care",
+        "First-Aid"
+      ]
+    },
+    {
+      "id": "indore_healthcare_043",
+      "name": "Health Care Clinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": "Green View Premium, N226 Road, near DCM School",
+        "area": "Singapore Township, Manglaya Sadak",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "453771",
+        "country": "India",
+        "full_address": "Green View Premium, N226 Road, near DCM School, Singapore Township, Manglaya Sadak, Indore, Madhya Pradesh – 453771",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "General medicine",
+        "Pediatric care",
+        "Women's health"
+      ],
+      "services_reported": [
+        "Fever treatment",
+        "Typhoid treatment",
+        "Skin condition care"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Verify operating hours and practitioner credentials directly.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 216,
+          "consultation_fee_inr": 1500,
+          "avg_wait_minutes": 18,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": false,
+          "has_ambulance": false,
+          "anomalies": [
+            "patient_load_spike",
+            "fee_outlier"
+          ]
+        }
+      },
+      "tags": [
+        "Primary Clinic",
+        "Orthopaedics OPD",
+        "Pediatrics",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_044",
+      "name": "Ayushman Mitra Clinic",
+      "facility_type": "clinic",
+      "address": {
+        "street": "244, Main Road",
+        "area": "Gram Ambamoliya",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452016",
+        "country": "India",
+        "full_address": "244, Main Road, Gram Ambamoliya, Indore, Madhya Pradesh – 452016",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Gynecology",
+        "Dermatology",
+        "Orthopedics"
+      ],
+      "services_reported": [
+        "General physician consultation",
+        "Pharmacy",
+        "Blood collection"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Blood collection and pharmacy services reported; verify availability and testing turnaround times.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 20,
+          "consultation_fee_inr": 100,
+          "avg_wait_minutes": 39,
+          "inpatient_beds": 0,
+          "doctors_on_duty": 1,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Primary Clinic",
+        "Ayushman Empanelled",
+        "General Medicine",
+        "OPD"
+      ]
+    },
+    {
+      "id": "indore_healthcare_045",
+      "name": "Shri Nanka Nursing Home – Advanced Neuro & Skin Care Center",
+      "facility_type": "nursing_home_specialty_center",
+      "address": {
+        "street": "84, Shri Vinayak Township",
+        "area": "Devguradiya",
+        "city": "Indore",
+        "district": "Indore",
+        "state": "Madhya Pradesh",
+        "postal_code": "452016",
+        "country": "India",
+        "full_address": "84, Shri Vinayak Township, Devguradiya, Indore, Madhya Pradesh – 452016",
+        "verification_status": "provided_by_user_unverified"
+      },
+      "specialties_reported": [
+        "Neurology",
+        "Dermatology"
+      ],
+      "services_reported": [
+        "Epilepsy care",
+        "Stroke care",
+        "Parkinson's care",
+        "Skin care"
+      ],
+      "treatments_reported": [],
+      "facilities": {
+        "emergency_services": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "icu": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ventilator": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "trauma_care": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ct": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "mri": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "sonography": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "x_ray": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "laboratory": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "blood_bank": {
+          "value": false,
+          "status": "synthetic_test_data"
+        },
+        "ambulance": {
+          "value": true,
+          "status": "synthetic_test_data"
+        },
+        "bed_capacity": 0
+      },
+      "verification": {
+        "overall_status": "unverified",
+        "address": "not_independently_verified",
+        "specialties": "reported_in_user_supplied_notes",
+        "services": "reported_in_user_supplied_notes",
+        "facilities": "synthetic_test_data_for_unknown_fields",
+        "last_verified_date": null
+      },
+      "notes": "Confirm exact inpatient facilities, operating hours, and specialist doctor availability.",
+      "synthetic_test_data": {
+        "is_synthetic": true,
+        "status": "synthetic_not_real",
+        "data": {
+          "avg_daily_opd_patients": 20,
+          "consultation_fee_inr": 250,
+          "avg_wait_minutes": 18,
+          "inpatient_beds": 4,
+          "doctors_on_duty": 2,
+          "opd_hours": "09:00-21:00",
+          "has_lab_collection": true,
+          "has_ambulance": false,
+          "anomalies": []
+        }
+      },
+      "tags": [
+        "Nursing Home",
+        "Neuro & Skin Care",
+        "Dermatology",
+        "Specialist OPD"
+      ]
+    }
+  ]
+}

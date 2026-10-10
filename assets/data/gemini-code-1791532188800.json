@@ -1,0 +1,66 @@
+[
+  {
+    "level": "LEVEL 1 — Home care / Observe",
+    "severity": 1,
+    "recommendation": "Mild, uncomplicated symptoms",
+    "examples": [
+      "Common cold",
+      "Mild headache",
+      "Mild muscle pain",
+      "Minor superficial wound",
+      "Mild diarrhea without dehydration"
+    ],
+    "typical_action": "Rest, fluids, basic supportive care; monitor"
+  },
+  {
+    "level": "LEVEL 2 — Local Clinic / PHC",
+    "severity": 2,
+    "recommendation": "Needs examination or treatment but no immediate danger signs",
+    "examples": [
+      "Persistent fever",
+      "Suspected uncomplicated malaria/dengue",
+      "UTI symptoms",
+      "Moderate diarrhea",
+      "Skin infection",
+      "Minor burns",
+      "Simple wound",
+      "Stable asthma symptoms"
+    ],
+    "typical_action": "Visit clinic/PHC; testing and treatment"
+  },
+  {
+    "level": "LEVEL 3 — Urgent Referral",
+    "severity": 3,
+    "recommendation": "Potentially serious; needs higher-level evaluation",
+    "examples": [
+      "Suspected severe infection",
+      "Pneumonia with breathing difficulty",
+      "Significant dehydration",
+      "Fracture",
+      "Deep wound",
+      "Animal bite",
+      "Persistent abdominal pain",
+      "Pregnancy complications"
+    ],
+    "typical_action": "Clinic/PHC first for stabilization → CHC/hospital"
+  },
+  {
+    "level": "LEVEL 4 — Emergency / Big Hospital",
+    "severity": 4,
+    "recommendation": "Life-threatening or needs specialist/emergency facilities",
+    "examples": [
+      "Severe breathing difficulty",
+      "Unconsciousness",
+      "Shock",
+      "Severe bleeding",
+      "Chest pain with concerning features",
+      "Stroke symptoms",
+      "Severe burns",
+      "Major trauma",
+      "Seizures",
+      "Severe poisoning",
+      "Complicated childbirth"
+    ],
+    "typical_action": "Immediate emergency referral/ambulance; don't wait for routine clinic treatment"
+  }
+]
